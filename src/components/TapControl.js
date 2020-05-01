@@ -2,6 +2,7 @@ import React from 'react';
 import NewKegForm from './NewKegForm';
 import TapList from './TapList';
 import KegDetail from './KegDetail';
+import { connect } from 'react-redux';
 
 const tapControlStyles = {
   position: 'relative',
@@ -99,5 +100,7 @@ class TapControl extends React.Component {
     );
   }
 }
+
+TapControl = connect()(TapControl);
 
 export default TapControl;
