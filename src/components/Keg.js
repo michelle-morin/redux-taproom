@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 
 function Keg(props) {
 
@@ -20,14 +20,14 @@ function Keg(props) {
   };
 
   return(
-    <div style={kegStyles} id={props.id}>
+    <Card style={kegStyles} id={props.id}>
       <h2 className="beer-name">{props.name}</h2>
       <p>{props.brewery}</p>
       <p>ABV: {props.alcoholContent}% | IBU: {props.ibu}</p>
       <p>${props.price} per pint</p>
       {inStock(props.pintQuantity)}
       <Button className="details-button" onClick = {()=> props.whenKegClicked(props.id)}>DETAILS</Button>
-    </div>
+    </Card>
   );
 }
 
