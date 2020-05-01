@@ -71,6 +71,7 @@ button.buy-button, button.details-button {
   outline: none;
   box-shadow: none;
   cursor: pointer;
+  border: none;
 }
 
 button.buy-button:hover, button.details-button:hover {
