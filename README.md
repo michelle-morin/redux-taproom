@@ -54,16 +54,19 @@ _Next, install npm at the project's root directory by entering the following com
 * ``npm install``
 * ``npm start``
 
-_To view/edit the source code of this application, open the contents in a text editor or IDE of your choice (e.g., to open the project in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
+_To view/edit the source code of this application, open the contents in a text editor or IDE of your choice (e.g., to open the project in Visual Studio Code, enter the command_ ``code .`` _in Terminal (macOS) or PowerShell (Windows))._
 
 ## Technologies Used
-* _Git_
-* _CSS_
-* _JavaScript_
-* _React_
-* _Redux_
-* _Webpack_
-* _npm_
+* Git
+* CSS
+* JavaScript
+* JSX
+* React
+* Redux
+* Create-React-App
+* Webpack
+* npm
+* ESLint
 
 ### License
 
