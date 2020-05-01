@@ -67,6 +67,7 @@ _To view/edit the source code of this application, open the contents in a text e
 * JSX
 * React
 * Redux
+* React Bootstrap
 * Create-React-App
 * Webpack
 * npm
