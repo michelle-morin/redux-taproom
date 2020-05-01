@@ -1,4 +1,5 @@
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
+import * as c from './../../actions/ActionTypes';
 
 describe('selectedKegReducer', () => {
 
@@ -19,7 +20,7 @@ describe('selectedKegReducer', () => {
 
   test('should successfully set the selectedKeg to the keg passed to the reducer', () => {
     action = {
-      type: 'CHANGE_SELECTED',
+      type: c.CHANGE_SELECTED,
       name: 'hazy IPA',
       brewery: 'ex novo',
       alcoholContent: 7,
@@ -33,7 +34,7 @@ describe('selectedKegReducer', () => {
 
   test('should reset selected keg to null', () => {
     action = {
-      type: 'UNSELECT_KEG'
+      type: c.UNSELECT_KEG
     };
     expect(selectedKegReducer(selectedKeg, action)).toEqual(null);
   });

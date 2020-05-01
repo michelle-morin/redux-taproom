@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 import tapListReducer from '../../reducers/tap-list-reducer';
 import formVisibleReducer from '../../reducers/form-visible-reducer';
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
+import * as c from './../../actions/ActionTypes';
 
 let store = createStore(rootReducer);
 
@@ -29,7 +30,7 @@ describe('rootReducer', () => {
 
   test('that tapListReducer ADD_KEG action matches rootReducer', () => {
     const action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name: 'hazy IPA',
       brewery: 'ex novo',
       alcoholContent: 7,
@@ -44,7 +45,7 @@ describe('rootReducer', () => {
 
   test('that tapListReducer DELETE_KEG action matches rootReducer', () => {
     const action = {
-      type: 'DELETE_KEG',
+      type: c.DELETE_KEG,
       id: 1
     };
     store.dispatch(action);
@@ -53,7 +54,7 @@ describe('rootReducer', () => {
 
   test('that formVisibleReducer TOGGLE_FORM action matches rootReducer', () => {
     const action = {
-      type: 'TOGGLE_FORM'
+      type: c.TOGGLE_FORM
     };
     store.dispatch(action);
     expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, action));
@@ -61,7 +62,7 @@ describe('rootReducer', () => {
 
   test('that selectedKegReducer CHANGE_SELECTED action matches rootReducer', () => {
     const action = {
-      type: 'CHANGE_SELECTED',
+      type: c.CHANGE_SELECTED,
       name: 'hazy IPA',
       brewery: 'ex novo',
       alcoholContent: 7,
@@ -76,7 +77,7 @@ describe('rootReducer', () => {
 
   test('that selectedKegReducer UNSELECT_KEG action matches rootReducer', () => {
     const action = {
-      type: 'UNSELECT_KEG'
+      type: c.UNSELECT_KEG
     };
     store.dispatch(action);
     expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action));

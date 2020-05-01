@@ -1,4 +1,5 @@
 import tapListReducer from '../../reducers/tap-list-reducer';
+import * as c from './../../actions/ActionTypes';
 
 describe('tapListReducer', () => {
 
@@ -42,7 +43,7 @@ describe('tapListReducer', () => {
   test('should successfully add new keg to masterKegList', () => {
     const { name, brewery, alcoholContent, ibu, price, pintQuantity, id } = newKeg;
     action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name: name,
       brewery: brewery,
       alcoholContent: alcoholContent,
@@ -66,7 +67,7 @@ describe('tapListReducer', () => {
 
   test('should successfully delete a keg', () => {
     action = {
-      type: 'DELETE_KEG',
+      type: c.DELETE_KEG,
       id: 1
     };
     expect(tapListReducer(currentState, action)).toEqual({
@@ -84,7 +85,7 @@ describe('tapListReducer', () => {
 
   test('should successfully decrement pint quantity by 1', () => {
     action = {
-      type: 'SELL_KEG',
+      type: c.SELL_KEG,
       id: 1
     };
     expect(tapListReducer(currentState, action)).toEqual({
