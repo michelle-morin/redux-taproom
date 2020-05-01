@@ -15,7 +15,8 @@ const tapControlStyles = {
   marginTop: '2vh',
   marginLeft: '10vw',
   marginRight: '10vw',
-  marginBottom: '10%'
+  marginBottom: '10%',
+  paddingBottom: '3%'
 }
 
 function TapControl(props) {
