@@ -1,6 +1,7 @@
 import React from "react";
 import BeerImage from './BeerImage';
 import PropTypes from 'prop-types';
+import { Container } from 'react-bootstrap';
 
 function KegDetail(props){
   const { keg, onClickingDelete } = props;
@@ -20,7 +21,7 @@ function KegDetail(props){
   };
 
   return (
-    <div style={kegDetailStyles}>
+    <Container style={kegDetailStyles}>
       <BeerImage />
       <div className="beer-details">
         <h1>{keg.name}</h1>
@@ -31,7 +32,7 @@ function KegDetail(props){
         <p>Tapped on {new Date(keg.kegTappedDate).toLocaleString()}</p>
         {isDeletable(keg.pintQuantity)}
       </div>
-    </div>
+    </Container>
   );
 }
 
