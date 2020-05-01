@@ -2,6 +2,7 @@ import React from 'react';
 import NewKegForm from './NewKegForm';
 import TapList from './TapList';
 import KegDetail from './KegDetail';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const tapControlStyles = {
@@ -15,92 +16,123 @@ const tapControlStyles = {
   marginBottom: '10%'
 }
 
-class TapControl extends React.Component {
+function TapControl(props) {
+  const { dispatch } = props;
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      formVisibleOnPage: false,
-      masterKegList: [],
-      selectedKeg: null
+  const handleClick = () => {
+    if (props.selectedKeg != null) {
+      const action = {
+        type: 'UNSELECT_KEG'
+      };
+      dispatch(action);
+    } else {
+      const action = {
+        type: 'TOGGLE_FORM'
+      }
+      dispatch(action);
+    }
+  };
+
+  const handleAddingNewKegToList = (newKeg) => {
+    const { name, brewery, alcoholContent, ibu, price, pintQuantity, id } = newKeg;
+    const action = {
+      type: 'ADD_KEG',
+      name: name,
+      brewery: brewery,
+      alcoholContent: alcoholContent,
+      ibu: ibu,
+      price: price,
+      pintQuantity: pintQuantity,
+      id: id
     };
+    dispatch(action);
+    const actionTwo = {
+      type: 'TOGGLE_FORM'
+    };
+    dispatch(actionTwo);
+  };
+
+  const handleChangingSelectedKeg = (id) => {
+    const selectedKeg = props.masterKegList[id];
+    const action = {
+      type: 'CHANGE_SELECTED',
+      name: selectedKeg.name,
+      brewery: selectedKeg.brewery,
+      alcoholContent: selectedKeg.alcoholContent,
+      ibu: selectedKeg.ibu,
+      price: selectedKeg.price,
+      pintQuantity: selectedKeg.pintQuantity,
+      id: selectedKeg.id
+    };
+    dispatch(action);
+  };
+
+  const handleKegPurchase = (id) => {
+    const action = {
+      type: 'SELL_KEG',
+      id: id
+    };
+    dispatch(action);
+    const actionTwo = {
+      type: 'UNSELECT_KEG'
+    };
+    dispatch(actionTwo);
+  };
+
+  const handleDeletingKeg = (id) => {
+    const action = {
+      type: 'DELETE_KEG',
+      id: id
+    };
+    dispatch(action);
+    const actionTwo = {
+      type: 'UNSELECT_KEG'
+    };
+    dispatch(actionTwo);
+  };
+
+  let currentlyVisibleState = null;
+  let buttonText = null;
+
+  if (props.selectedKeg != null) {
+    currentlyVisibleState = <KegDetail 
+      keg={props.selectedKeg}
+      onClickingDelete = {handleDeletingKeg} />
+    buttonText = "RETURN TO TAP LIST";
+  } else if (props.formVisible) {
+    currentlyVisibleState = <NewKegForm 
+      onNewKegCreation={handleAddingNewKegToList} />
+    buttonText = "RETURN TO TAP LIST";
+  } else {
+    currentlyVisibleState = <TapList 
+      tapList={props.masterKegList}
+      onKegSelection={handleChangingSelectedKeg}
+      onClickingBuy={handleKegPurchase} />
+    buttonText = "+ NEW KEG";
   }
 
-  handleClick = () => {
-    if (this.state.selectedKeg != null) {
-      this.setState({
-        formVisibleOnPage: false,
-        selectedKeg: null
-      });
-    } else {
-      this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage
-      }));
-    }
-  }
-
-  handleAddingNewKegToList = (newKeg) => {
-    const newMasterKegList = this.state.masterKegList.concat(newKeg);
-    this.setState({
-      masterKegList: newMasterKegList,
-      formVisibleOnPage: false
-    });
-  }
-
-  handleChangingSelectedKeg = (id) => {
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
-    this.setState({selectedKeg: selectedKeg});
-  }
-
-  handleKegPurchase = (id) => {
-    const kegToBePurchased = this.state.masterKegList.filter(keg => keg.id === id)[0];
-    const newPintQuantity = kegToBePurchased.pintQuantity - 1;
-    const updatedKeg = {...kegToBePurchased, pintQuantity: newPintQuantity};
-    const previousKegList = this.state.masterKegList.filter(keg => keg.id !== id);
-    this.setState({
-      masterKegList: [...previousKegList, updatedKeg],
-      selectedKeg: null
-    });
-  }
-
-  handleDeletingKeg = (id) => {
-    const newMasterKegList = this.state.masterKegList.filter(keg => keg.id !== id);
-    this.setState({
-      masterKegList: newMasterKegList,
-      selectedKeg: null
-    });
-  }
-
-  render(){
-    let currentlyVisibleState = null;
-    let buttonText = null;
-
-    if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail 
-        keg={this.state.selectedKeg}
-        onClickingDelete = {this.handleDeletingKeg} />
-      buttonText = "RETURN TO TAP LIST";
-    } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewKegForm 
-        onNewKegCreation={this.handleAddingNewKegToList} />
-      buttonText = "RETURN TO TAP LIST";
-    } else {
-      currentlyVisibleState = <TapList 
-        tapList={this.state.masterKegList}
-        onKegSelection={this.handleChangingSelectedKeg}
-        onClickingBuy={this.handleKegPurchase} />
-      buttonText = "+ NEW KEG";
-    }
-
-    return(
-      <div style={tapControlStyles}>
-        <button className="reused-button" onClick={this.handleClick}>{buttonText}</button>
-        {currentlyVisibleState}
-      </div>
-    );
-  }
+  return(
+    <div style={tapControlStyles}>
+      <button className="reused-button" onClick={handleClick}>{buttonText}</button>
+      {currentlyVisibleState}
+    </div>
+  );
 }
 
-TapControl = connect()(TapControl);
+const mapStateToProps = state => {
+  return {
+    masterKegList: state.masterKegList,
+    formVisible: state.formVisible,
+    selectedKeg: state.selectedKeg
+  }
+};
+
+TapControl.propTypes = {
+  masterKegList: PropTypes.object,
+  selectedKeg: PropTypes.object,
+  formVisible: PropTypes.bool
+}
+
+TapControl = connect(mapStateToProps)(TapControl);
 
 export default TapControl;
