@@ -60,4 +60,26 @@ describe('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, action));
   });
+
+  test('that selectedKegReducer CHANGE_SELECTED action matches rootReducer', () => {
+    const action = {
+      type: 'CHANGE_SELECTED',
+      name: 'hazy IPA',
+      brewery: 'ex novo',
+      alcoholContent: 7,
+      ibu: 55,
+      price: 7,
+      id: 1
+    };
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action));
+  });
+
+  test('that selectedKegReducer UNSELECT_KEG action matches rootReducer', () => {
+    const action = {
+      type: 'UNSELECT_KEG'
+    };
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action));
+  });
 });
