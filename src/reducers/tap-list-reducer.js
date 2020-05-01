@@ -12,6 +12,10 @@ export default (state = {}, action) => {
           id: id
         }
       });
+    case 'DELETE_KEG':
+      const newKegList = { ...state };
+      delete newKegList[id];
+      return newKegList;
     default:
       return state;
   }

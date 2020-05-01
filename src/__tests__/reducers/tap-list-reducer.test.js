@@ -3,8 +3,7 @@ import { v4 } from 'uuid';
 
 describe('tapListReducer', () => {
 
-  const id1 = v4();
-  const id2 = v4();
+  let action;
 
   const newKeg = {
     name: 'hazy IPA',
@@ -12,25 +11,25 @@ describe('tapListReducer', () => {
     alcoholContent: 7,
     ibu: 55,
     price: 7,
-    id: id1
+    id: 1
   };
 
-  const currentKegList = {
-    id1: {
+  const currentState = {
+    1: {
       name: 'hazy IPA',
       brewery: 'ex novo',
       alcoholContent: 7,
       ibu: 55,
       price: 7,
-      id: id1
+      id: 1
     },
-    id2: {
+    2: {
       name: 'cucumber crush',
       brewery: '10 barrel brewing co.',
       alcoholContent: 5,
       ibu: 4,
       price: 6,
-      id: id2
+      id: 2
     }
   };
 
@@ -40,7 +39,7 @@ describe('tapListReducer', () => {
 
   test('should successfully add new keg to masterKegList', () => {
     const { name, brewery, alcoholContent, ibu, price, id } = newKeg;
-    const action = {
+    action = {
       type: 'ADD_KEG',
       name: name,
       brewery: brewery,
@@ -62,18 +61,18 @@ describe('tapListReducer', () => {
   });
 
   test('should successfully delete a keg', () => {
-    const action = {
+    action = {
       type: 'DELETE_KEG',
       id: 1
     };
-    expect(tapListReducer(currentKegList, action)).toEqual({
-      id2: {
+    expect(tapListReducer(currentState, action)).toEqual({
+      [2] : {
         name: 'cucumber crush',
         brewery: '10 barrel brewing co.',
         alcoholContent: 5,
         ibu: 4,
         price: 6,
-        id: id2
+        id: 2
       }
     });
   });
