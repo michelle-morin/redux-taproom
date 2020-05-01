@@ -7,7 +7,10 @@ function KegDetail(props){
 
   const kegDetailStyles = {
     marginTop: '2%',
-    textAlign: 'center'
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 
   function isDeletable(quantity) {
@@ -18,14 +21,16 @@ function KegDetail(props){
 
   return (
     <div style={kegDetailStyles}>
-      <h1>{keg.name}</h1>
-      <p>Brewed by: {keg.brewery}</p>
-      <p>ABV: {keg.alcoholContent}% | IBU: {keg.ibu}</p>
-      <p>${keg.price} per pint</p>
-      <p>pints in keg: {keg.pintQuantity}</p>
-      <p>tapped on {new Date(keg.kegTappedDate).toLocaleString()}</p>
-      {isDeletable(keg.pintQuantity)}
       <BeerImage />
+      <div className="beer-details">
+        <h1>{keg.name}</h1>
+        <p>Brewed by: {keg.brewery}</p>
+        <p>ABV: {keg.alcoholContent}% | IBU: {keg.ibu}</p>
+        <p>${keg.price} per pint</p>
+        <p>Pints in keg: {keg.pintQuantity}</p>
+        <p>Tapped on {new Date(keg.kegTappedDate).toLocaleString()}</p>
+        {isDeletable(keg.pintQuantity)}
+      </div>
     </div>
   );
 }
