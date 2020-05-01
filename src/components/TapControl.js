@@ -9,7 +9,7 @@ import * as a from '../actions';
 
 const tapControlStyles = {
   position: 'relative',
-  top: '20vh',
+  top: '30vh',
   width: '80vw',
   height: 'auto',
   marginTop: '2vh',
