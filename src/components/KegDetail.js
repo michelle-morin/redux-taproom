@@ -23,6 +23,7 @@ function KegDetail(props){
       <p>ABV: {keg.alcoholContent}% | IBU: {keg.ibu}</p>
       <p>${keg.price} per pint</p>
       <p>pints in keg: {keg.pintQuantity}</p>
+      <p>tapped on {new Date(keg.kegTappedDate).toLocaleString()}</p>
       {isDeletable(keg.pintQuantity)}
       <BeerImage />
     </div>
