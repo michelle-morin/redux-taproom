@@ -25,6 +25,9 @@ _This application is deployed on [GitHub Pages](https://michelle-morin.github.io
 ### Component Tree
 ![component tree](/ComponentTree.jpg)
 
+### Homepage
+![homepage](/UI.png)
+
 ## Setup/Installation Requirements
 
 #### Node install
