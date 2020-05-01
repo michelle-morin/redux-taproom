@@ -163,5 +163,7 @@ button.delete-button, button.delete-button:focus {
   button.reused-button {
     width: 100%;
   }
+  img.beer-image {
+    display: none;
+  }
 }
-
