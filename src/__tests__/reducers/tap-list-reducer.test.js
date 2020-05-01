@@ -82,4 +82,31 @@ describe('tapListReducer', () => {
       }
     });
   });
+
+  test('should successfully decrement pint quantity by 1', () => {
+    action = {
+      type: 'SELL_KEG',
+      id: 1
+    };
+    expect(tapListReducer(currentState, action)).toEqual({
+      1: {
+        name: 'hazy IPA',
+        brewery: 'ex novo',
+        alcoholContent: 7,
+        ibu: 55,
+        price: 7,
+        pintQuantity: 123,
+        id: 1
+      },
+      2: {
+        name: 'cucumber crush',
+        brewery: '10 barrel brewing co.',
+        alcoholContent: 5,
+        ibu: 4,
+        price: 6,
+        pintQuantity: 124,
+        id: 2
+      }
+    });
+  });
 });
