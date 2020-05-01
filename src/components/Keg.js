@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap';
 
 function Keg(props) {
 
   function inStock(quantity) {
-    return quantity > 10 ? <button className="buy-button" onClick={() => props.whenBuyClicked(props.id)}>BUY</button>
-    : quantity <= 10 && quantity > 0 ? <button className="buy-button almost-gone" onClick={() => props.whenBuyClicked(props.id)}>BUY(ALMOST GONE!)</button>
+    return quantity > 10 ? <Button className="buy-button" onClick={() => props.whenBuyClicked(props.id)}>BUY</Button>
+    : quantity <= 10 && quantity > 0 ? <Button className="buy-button almost-gone" onClick={() => props.whenBuyClicked(props.id)}>BUY(ALMOST GONE!)</Button>
     : <p className="empty-keg">keg is empty!</p>
   };
 
@@ -25,7 +26,7 @@ function Keg(props) {
       <p>ABV: {props.alcoholContent}% | IBU: {props.ibu}</p>
       <p>${props.price} per pint</p>
       {inStock(props.pintQuantity)}
-      <button className="details-button" onClick = {()=> props.whenKegClicked(props.id)}>DETAILS</button>
+      <Button className="details-button" onClick = {()=> props.whenKegClicked(props.id)}>DETAILS</Button>
     </div>
   );
 }
