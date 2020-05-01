@@ -9,6 +9,7 @@ describe('selectedKegReducer', () => {
     alcoholContent: 7,
     ibu: 55,
     price: 7,
+    pintQuantity: 124,
     id: 1 
   };
 
@@ -24,6 +25,7 @@ describe('selectedKegReducer', () => {
       alcoholContent: 7,
       ibu: 55,
       price: 7,
+      pintQuantity: 124,
       id: 1
     };
     expect(selectedKegReducer(null, action)).toEqual(selectedKeg);

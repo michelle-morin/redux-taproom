@@ -1,5 +1,5 @@
 export default (state = null, action) => {
-  const { name, brewery, alcoholContent, ibu, price, id } = action;
+  const { name, brewery, alcoholContent, ibu, price, pintQuantity, id } = action;
   switch(action.type) {
     case 'CHANGE_SELECTED':
       const newState = {
@@ -8,6 +8,7 @@ export default (state = null, action) => {
         alcoholContent: alcoholContent,
         ibu: ibu,
         price: price,
+        pintQuantity: pintQuantity,
         id: id
       };
       return newState;

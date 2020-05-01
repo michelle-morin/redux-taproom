@@ -3,9 +3,6 @@ import { createStore } from 'redux';
 import tapListReducer from '../../reducers/tap-list-reducer';
 import formVisibleReducer from '../../reducers/form-visible-reducer';
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
-// import formVisibleReducer from '../../reducers/form-visible-reducer';
-// import tapListReducer from '../../reducers/tap-list-reducer';
-// import selectedKegReducer from '../../reducers/selected-keg-reducer';
 
 let store = createStore(rootReducer);
 
@@ -38,6 +35,7 @@ describe('rootReducer', () => {
       alcoholContent: 7,
       ibu: 55,
       price: 7,
+      pintQuantity: 124,
       id: 1
     };
     store.dispatch(action);
@@ -69,6 +67,7 @@ describe('rootReducer', () => {
       alcoholContent: 7,
       ibu: 55,
       price: 7,
+      pintQuantity: 124,
       id: 1
     };
     store.dispatch(action);
