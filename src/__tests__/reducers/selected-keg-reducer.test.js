@@ -11,6 +11,7 @@ describe('selectedKegReducer', () => {
     ibu: 55,
     price: 7,
     pintQuantity: 124,
+    kegTappedDate: 1588356385686,
     id: 1 
   };
 
@@ -27,6 +28,7 @@ describe('selectedKegReducer', () => {
       ibu: 55,
       price: 7,
       pintQuantity: 124,
+      kegTappedDate: 1588356385686,
       id: 1
     };
     expect(selectedKegReducer(null, action)).toEqual(selectedKeg);

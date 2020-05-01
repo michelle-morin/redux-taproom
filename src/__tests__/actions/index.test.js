@@ -9,6 +9,7 @@ describe('taproom actions', () => {
     ibu: 4,
     price: 6,
     pintQuantity: 124,
+    kegTappedDate: 1588356385686,
     id: 2
   };
 
@@ -21,6 +22,7 @@ describe('taproom actions', () => {
       ibu: 4,
       price: 6,
       pintQuantity: 124,
+      kegTappedDate: 1588356385686,
       id: 2
     });
   });
@@ -54,6 +56,7 @@ describe('taproom actions', () => {
       ibu: 4,
       price: 6,
       pintQuantity: 124,
+      kegTappedDate: 1588356385686,
       id: 2
     });
   });

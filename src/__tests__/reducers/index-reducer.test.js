@@ -37,6 +37,7 @@ describe('rootReducer', () => {
       ibu: 55,
       price: 7,
       pintQuantity: 124,
+      kegTappedDate: 1588356385686,
       id: 1
     };
     store.dispatch(action);
@@ -69,6 +70,7 @@ describe('rootReducer', () => {
       ibu: 55,
       price: 7,
       pintQuantity: 124,
+      kegTappedDate: 1588356385686,
       id: 1
     };
     store.dispatch(action);

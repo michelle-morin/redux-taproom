@@ -12,6 +12,7 @@ describe('tapListReducer', () => {
     ibu: 55,
     price: 7,
     pintQuantity: 124,
+    kegTappedDate: 1588356385686,
     id: 1
   };
 
@@ -23,6 +24,7 @@ describe('tapListReducer', () => {
       ibu: 55,
       price: 7,
       pintQuantity: 124,
+      kegTappedDate: 1588356385686,
       id: 1
     },
     2: {
@@ -32,6 +34,7 @@ describe('tapListReducer', () => {
       ibu: 4,
       price: 6,
       pintQuantity: 124,
+      kegTappedDate: 1588356385686,
       id: 2
     }
   };
@@ -41,7 +44,7 @@ describe('tapListReducer', () => {
   });
 
   test('should successfully add new keg to masterKegList', () => {
-    const { name, brewery, alcoholContent, ibu, price, pintQuantity, id } = newKeg;
+    const { name, brewery, alcoholContent, ibu, price, pintQuantity, kegTappedDate, id } = newKeg;
     action = {
       type: c.ADD_KEG,
       name: name,
@@ -50,6 +53,7 @@ describe('tapListReducer', () => {
       ibu: ibu,
       price: price,
       pintQuantity: pintQuantity,
+      kegTappedDate: kegTappedDate,
       id: id
     };
     expect(tapListReducer({}, action)).toEqual({
@@ -60,6 +64,7 @@ describe('tapListReducer', () => {
         ibu: ibu,
         price: price,
         pintQuantity: pintQuantity,
+        kegTappedDate: kegTappedDate,
         id: id
       }
     });
@@ -78,6 +83,7 @@ describe('tapListReducer', () => {
         ibu: 4,
         price: 6,
         pintQuantity: 124,
+        kegTappedDate: 1588356385686,
         id: 2
       }
     });
@@ -96,6 +102,7 @@ describe('tapListReducer', () => {
         ibu: 55,
         price: 7,
         pintQuantity: 123,
+        kegTappedDate: 1588356385686,
         id: 1
       },
       2: {
@@ -105,6 +112,7 @@ describe('tapListReducer', () => {
         ibu: 4,
         price: 6,
         pintQuantity: 124,
+        kegTappedDate: 1588356385686,
         id: 2
       }
     });

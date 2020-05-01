@@ -19,7 +19,7 @@ export const sellKeg = (id) => ({
 });
 
 export const changeSelected = (keg) => {
-  const { name, brewery, alcoholContent, ibu, price, pintQuantity, id } = keg;
+  const { name, brewery, alcoholContent, ibu, price, pintQuantity, kegTappedDate, id } = keg;
   return {
     type: c.CHANGE_SELECTED,
     name: name,
@@ -28,12 +28,13 @@ export const changeSelected = (keg) => {
     ibu: ibu,
     price: price,
     pintQuantity: pintQuantity,
+    kegTappedDate: kegTappedDate,
     id: id
   }
 };
 
 export const addKeg = (keg) => {
-  const { name, brewery, alcoholContent, ibu, price, pintQuantity, id } = keg;
+  const { name, brewery, alcoholContent, ibu, price, pintQuantity, kegTappedDate, id } = keg;
   return {
     type: c.ADD_KEG,
     name: name,
@@ -42,6 +43,7 @@ export const addKeg = (keg) => {
     ibu: ibu,
     price: price,
     pintQuantity: pintQuantity,
+    kegTappedDate: kegTappedDate,
     id: id
   }
 };

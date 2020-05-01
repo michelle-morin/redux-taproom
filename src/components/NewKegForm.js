@@ -7,7 +7,7 @@ function NewKegForm(props) {
 
   function handleNewKegFormSubmission(event){
     event.preventDefault();
-    props.onNewKegCreation({name: event.target.name.value, brewery: event.target.brewery.value, alcoholContent: parseInt(event.target.alcoholContent.value), ibu: parseInt(event.target.ibu.value), price: parseInt(event.target.price.value), pintQuantity: 124, id: v4()});
+    props.onNewKegCreation({name: event.target.name.value, brewery: event.target.brewery.value, alcoholContent: parseInt(event.target.alcoholContent.value), ibu: parseInt(event.target.ibu.value), price: parseInt(event.target.price.value), pintQuantity: 124, kegTappedDate: Date.now(), id: v4()});
   }
 
   const newKegFormStyles = {
