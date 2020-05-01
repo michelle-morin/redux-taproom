@@ -13,7 +13,7 @@ function TapList(props){
 
   return(
     <div style={tapListStyles}>
-      {props.tapList.map((keg) =>
+      {Object.values(props.tapList).map((keg) =>
       <Keg 
         whenBuyClicked = {props.onClickingBuy}
         whenKegClicked = {props.onKegSelection}
@@ -31,7 +31,7 @@ function TapList(props){
 }
 
 TapList.propTypes = {
-  tapList: PropTypes.array,
+  tapList: PropTypes.object,
   onKegSelection: PropTypes.func,
   onClickingBuy: PropTypes.func
 }
