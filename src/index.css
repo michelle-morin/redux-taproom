@@ -47,7 +47,7 @@ button.reused-button, button.reused-button:focus {
   outline: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   border: none;
-  transition: transform .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 button.reused-button:hover, button.reused-button:active {
@@ -66,8 +66,6 @@ input.form-control {
   display: block;
   margin: auto auto;
   height: 2.5rem;
-  width: 30vw;
-  margin-bottom: 2%;
   background-color: transparent;
   border: 1px solid rgb(70,108,82);
   font-size: 1.5rem;
@@ -82,7 +80,7 @@ button.new-keg-button, button.new-keg-button:focus {
   display: block;
   margin: auto auto;
   margin-top: 1%;
-  width: 25vw;
+  width: 100%;
   padding: 1%;
   font-size: 1.5rem;
   height: auto;
@@ -90,7 +88,7 @@ button.new-keg-button, button.new-keg-button:focus {
   border: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
-  transition: transform .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 button.new-keg-button:hover {
@@ -115,7 +113,7 @@ button.buy-button, button.details-button, button.buy-button:focus, button.detail
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
   border: none;
-  transition: transform .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 button.buy-button:hover, button.details-button:hover {
@@ -133,7 +131,7 @@ p.empty-keg {
 button.almost-gone, button.almost-gone:focus {
   background-color: #6C4660;
   color: #f6f6f2;
-  transition: transform .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 button.almost-gone:hover {
@@ -156,3 +154,14 @@ button.delete-button, button.delete-button:focus {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+  .tap-control {
+    height: auto;
+    margin-bottom: 5%;
+  }
+  button.reused-button {
+    width: 100%;
+  }
+}
+
