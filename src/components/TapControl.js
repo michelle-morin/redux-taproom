@@ -100,6 +100,7 @@ TapControl.propTypes = {
   formVisible: PropTypes.bool
 }
 
+// eslint-disable-next-line
 TapControl = connect(mapStateToProps)(TapControl);
 
 export default TapControl;
