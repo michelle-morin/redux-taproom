@@ -29,4 +29,27 @@ describe('rootReducer', () => {
   test('that initial state of selectedKegReducer matches rootReducer', () => {
     expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, { type: null }));
   });
+
+  test('that tapListReducer ADD_KEG action matches rootReducer', () => {
+    const action = {
+      type: 'ADD_KEG',
+      name: 'hazy IPA',
+      brewery: 'ex novo',
+      alcoholContent: 7,
+      ibu: 55,
+      price: 7,
+      id: 1
+    };
+    store.dispatch(action);
+    expect(store.getState().masterKegList).toEqual(tapListReducer(undefined, action));
+  });
+
+  test('that tapListReducer DELETE_KEG action matches rootReducer', () => {
+    const action = {
+      type: 'DELETE_KEG',
+      id: 1
+    };
+    store.dispatch(action);
+    expect(store.getState().masterKegList).toEqual(tapListReducer(undefined, action));
+  });
 });
