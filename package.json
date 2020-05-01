@@ -1,6 +1,6 @@
 {
   "homepage": "http://michelle-morin.github.io/redux-taproom",
-  "name": "taproom",
+  "name": "redux-taproom",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
