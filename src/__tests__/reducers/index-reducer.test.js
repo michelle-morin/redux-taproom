@@ -52,4 +52,12 @@ describe('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().masterKegList).toEqual(tapListReducer(undefined, action));
   });
+
+  test('that formVisibleReducer TOGGLE_FORM action matches rootReducer', () => {
+    const action = {
+      type: 'TOGGLE_FORM'
+    };
+    store.dispatch(action);
+    expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, action));
+  });
 });
