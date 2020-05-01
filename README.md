@@ -1,14 +1,14 @@
-# React Taproom
+# Taproom
 
-#### React Fundamentals Independent Project for Epicodus, April 24, 2020
+#### React/Redux Independent Project for Epicodus, May 1, 2020
 
 #### By: Michelle Morin
 
 ## Description
 
-_This application, built using Create React App, is a taproom where a bar can track their beer inventory._
+_This application, built using Create React App, is a taproom where a bar can track their beer inventory. All application state is stored using Redux._
 
-_Deployed on [GitHub Pages](https://michelle-morin.github.io/taproom/)_
+_Deployed on [GitHub Pages](https://michelle-morin.github.io/redux-taproom/)_
 
 ### Specification user stories:
 
@@ -46,21 +46,22 @@ _Please visit the [Node.js website](https://nodejs.org/en/download/) for install
 
 _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd desktop``
-* ``git clone https://github.com/michelle-morin/taproom``
-* ``cd taproom``
+* ``git clone https://github.com/michelle-morin/redux-taproom``
+* ``cd redux-taproom``
 
-_Confirm that you have navigated to the taproom directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
+_Confirm that you have navigated to the redux-taproom directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
 _Next, install npm at the project's root directory by entering the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``npm install``
 * ``npm start``
 
-_To view/edit the source code of this application, open the contents of the taproom directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
+_To view/edit the source code of this application, open the contents in a text editor or IDE of your choice (e.g., to open the project in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
 
 ## Technologies Used
 * _Git_
 * _CSS_
 * _JavaScript_
 * _React_
+* _Redux_
 * _Webpack_
 * _npm_
 
