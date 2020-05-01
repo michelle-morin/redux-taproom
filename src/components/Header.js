@@ -13,8 +13,7 @@ function Header(){
     flexWrap: 'wrap',
     borderBottom: '3px solid rgb(70,108,82)',
     color:  '#f6f6f2',
-    fontSize: '2rem',
-    fontFamily: "'Oswald', sans-serif"
+    fontFamily: "'Roboto Condensed', sans-serif",
   }
 
   return (
