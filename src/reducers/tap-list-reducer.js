@@ -14,9 +14,13 @@ export default (state = {}, action) => {
         }
       });
     case 'DELETE_KEG':
-      const newKegList = { ...state };
-      delete newKegList[id];
-      return newKegList;
+      const newTapList = { ...state };
+      delete newTapList[id];
+      return newTapList;
+    case 'SELL_KEG':
+      const updatedPintQuantity = state[id].pintQuantity - 1;
+      const updatedTapList = { ...state, [id]: { ...state[id], pintQuantity: updatedPintQuantity }};
+      return updatedTapList;
     default:
       return state;
   }
