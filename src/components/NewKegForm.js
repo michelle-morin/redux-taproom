@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Form } from 'react-bootstrap';
 import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 
@@ -19,29 +20,24 @@ function NewKegForm(props) {
 
   return (
     <div style={newKegFormStyles}>
-      <form onSubmit={handleNewKegFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='brew name' required/>
-        <input
-          type='text'
-          name='brewery'
-          placeholder='brewery name' required/>
-        <input
-          type='number'
-          name='alcoholContent'
-          placeholder='ABV' required/>
-        <input
-          type='number'
-          name='ibu'
-          placeholder='IBU' required/>
-        <input
-          type='number'
-          name='price'
-          placeholder='price' required/>
-        <button className="new-keg-button" type="submit">ADD KEG</button>
-      </form>
+      <Form onSubmit={handleNewKegFormSubmission}>
+        <Form.Group>
+          <Form.Control type='text' name='name' placeholder='brew name' required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Control type='text' name='brewery' placeholder='brewery' required/>
+        </Form.Group>
+        <Form.Group>
+          <Form.Control type='number' name='alcoholContent' placeholder='ABV' required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Control type='number' name='ibu' placeholder='IBU' required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Control type='number' name='price' placeholder='price' required />
+        </Form.Group>
+        <Button className="new-keg-button" type="submit">ADD KEG</Button>
+      </Form>
     </div>
   );
 }

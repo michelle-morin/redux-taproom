@@ -42,7 +42,7 @@ button.reused-button:hover, button.reused-button:focus {
   border: none;
 }
 
-input {
+input.form-control {
   font-family: 'Montserrat', sans-serif;
   display: block;
   margin: auto auto;
@@ -51,19 +51,19 @@ input {
   margin-bottom: 2%;
   background-color: transparent;
   border: 1px solid #388087;
-  border-radius: 5%;
   font-size: 1.5rem;
   padding: 1%;
   outline: none;
   box-shadow: none;
 }
 
-button.new-keg-button {
+button.new-keg-button, button.new-keg-button:hover {
   display: block;
   margin: auto auto;
+  margin-top: 1%;
   width: 25vw;
-  height: 2.5rem;
   font-size: 1.5rem;
+  padding: 1%;
   background-color: #388087;
   color: #f6f6f2;
   outline: none;
