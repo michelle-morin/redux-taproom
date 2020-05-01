@@ -4,6 +4,7 @@ import TapList from './TapList';
 import KegDetail from './KegDetail';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Button } from 'react-bootstrap';
 
 const tapControlStyles = {
   position: 'relative',
@@ -113,7 +114,7 @@ function TapControl(props) {
 
   return(
     <div style={tapControlStyles}>
-      <button className="reused-button" onClick={handleClick}>{buttonText}</button>
+      <Button className="reused-button" onClick={handleClick}>{buttonText}</Button>
       {currentlyVisibleState}
     </div>
   );
