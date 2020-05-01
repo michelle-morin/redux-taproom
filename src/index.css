@@ -2,34 +2,45 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #f6f6f2;
-  color: #388087;
+  color: #111111;
 }
 
-/* h2.beer-name {
-  color: rgb(86,74,64);
-  background-color: rgb(247,236,212);
-} */
+.header {
+  background-image: url(assets/hops.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 3rem;
+}
+
+.header h1 {
+  font-size: 4rem;
+  -webkit-text-stroke: 1.5px #111111;
+}
 
 h2.beer-name {
   background-image: url(assets/brushstroke.png);
   background-repeat: no-repeat;
-  background-size: 100% 95%;
+  background-size: 100% 100%;
   padding: 8px 0;
+  color: #111111;
 }
 
 .beer-image {
   top: 5vh;
-  height: 200px;
   width: 200px;
+  height: auto;
+}
+
+.beer-details {
+  padding: 2%;
 }
 
 button.reused-button, button.reused-button:focus {
-  color: rgb(86,74,64);
-  background-color: rgb(247,236,212);
-  height: 3rem;
+  background-color: #6C4660;
+  color: #f6f6f2;
   width: auto;
   font-size: 1.5rem;
-  padding: 1%;
   margin-left: 1%;
   margin-bottom: 0.5%;
   cursor: pointer;
@@ -40,16 +51,14 @@ button.reused-button, button.reused-button:focus {
 }
 
 button.reused-button:hover, button.reused-button:active {
-  background-color: rgb(86,74,64);
-  color: rgb(247,236,212);
+  background-color: #6C4660;
+  color: #f6f6f2;
   width: auto;
   transform: scale(1.05);
   font-size: 1.5rem;
-  padding: 1%;
   cursor: pointer;
   outline: none;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  border: none;
 }
 
 input.form-control {
@@ -60,7 +69,7 @@ input.form-control {
   width: 30vw;
   margin-bottom: 2%;
   background-color: transparent;
-  border: 1px solid #388087;
+  border: 1px solid rgb(70,108,82);
   font-size: 1.5rem;
   padding: 1%;
   outline: none;
@@ -68,14 +77,15 @@ input.form-control {
 }
 
 button.new-keg-button, button.new-keg-button:focus {
-  background-color: #388087;
+  background-color: rgb(70,108,82);
   color: #f6f6f2;
   display: block;
   margin: auto auto;
   margin-top: 1%;
   width: 25vw;
-  font-size: 1.5rem;
   padding: 1%;
+  font-size: 1.5rem;
+  height: auto;
   outline: none;
   border: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
@@ -84,8 +94,8 @@ button.new-keg-button, button.new-keg-button:focus {
 }
 
 button.new-keg-button:hover {
-  background-color: rgb(198,229,214);
-  color: #388087;
+  background-color: rgb(70,108,82);
+  color: #f6f6f2;
   border: none;
   outline: none;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -95,13 +105,12 @@ button.new-keg-button:hover {
 button.buy-button, button.details-button, button.buy-button:focus, button.details-button:focus {
   display: block;
   margin: auto auto;
-  margin-bottom: 2%;
   width: 80%;
   min-height: 2.5rem;
   height: auto;
   font-size: 1.5rem;
-  background-color: rgb(198,229,214);
-  color: #388087;
+  background-color: rgb(182,188,150);
+  color: #111111;
   outline: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
@@ -111,24 +120,25 @@ button.buy-button, button.details-button, button.buy-button:focus, button.detail
 
 button.buy-button:hover, button.details-button:hover {
   transform: scale(1.05);
-  background-color: #388087;
+  background-color: rgb(70,108,82);
   color: #f6f6f2;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 p.empty-keg {
-  color: rgb(86,74,64);
+  color: #6C4660;
   font-size: 1.5rem;
 }
 
 button.almost-gone, button.almost-gone:focus {
-  background-color: #388087;
+  background-color: #6C4660;
   color: #f6f6f2;
+  transition: transform .4s ease-in-out;
 }
 
 button.almost-gone:hover {
-  background-color: #f6f6f2;
-  color: #388087;
+  background-color: #6C4660;
+  color: #f6f6f2;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -140,8 +150,8 @@ button.delete-button, button.delete-button:focus {
   min-height: 2.5rem;
   height: auto;
   font-size: 1.5rem;
-  background-color: rgb(198,229,214);
-  color: #388087;
+  background-color: rgb(70,108,82);;
+  color: #f6f6f2;
   outline: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
