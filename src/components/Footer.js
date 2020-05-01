@@ -6,9 +6,8 @@ function Footer(){
     bottom: '0',
     left: '0',
     width: '100vw',
-    backgroundColor: 'rgb(198,229,214)',
-    borderTop: '2px solid #388087',
-    color: '#388087',
+    backgroundColor: '#6C4660',
+    color: '#f6f6f2',
     padding: '0.5%',
     paddingLeft: '2%'
   }

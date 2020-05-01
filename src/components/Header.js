@@ -6,20 +6,19 @@ function Header(){
     top: '0',
     left: '0',
     width: '100vw',
-    height: '20vh',
+    height: '30vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    borderBottom: '3px solid #388087',
-    backgroundColor: 'rgb(198,229,214)',
-    color:  '#388087',
+    borderBottom: '3px solid rgb(70,108,82)',
+    color:  '#f6f6f2',
     fontSize: '2rem',
     fontFamily: "'Oswald', sans-serif"
   }
 
   return (
-    <div style={headerStyles}>
+    <div className="header" style={headerStyles}>
       <h1>REACT ON TAP</h1>
     </div>
   );
