@@ -153,6 +153,14 @@ button.delete-button, button.delete-button:focus {
   outline: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+button.delete-button:hover {
+  background-color: rgb(70,108,82);;
+  color: #f6f6f2;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 @media screen and (max-width: 500px) {

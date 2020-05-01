@@ -1,7 +1,7 @@
 import React from "react";
 import BeerImage from './BeerImage';
 import PropTypes from 'prop-types';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 function KegDetail(props){
   const { keg, onClickingDelete } = props;
@@ -16,7 +16,7 @@ function KegDetail(props){
 
   function isDeletable(quantity) {
     if (quantity <= 0) {
-      return <button className="delete-button" onClick={()=> onClickingDelete(keg.id)}>DELETE KEG</button>
+      return <Button className="delete-button" onClick={()=> onClickingDelete(keg.id)}>DELETE KEG</Button>
     }
   };
 
