@@ -12,10 +12,10 @@ function Keg(props) {
 
   const kegStyles = {
     textAlign: 'center',
-    border: '2px solid #388087',
-    width: '300px',
-    height: '300px',
-    padding: '1%',
+    border: '2px solid rgb(70,108,82)',
+    width: '400px',
+    height: '400px',
+    padding: '2%',
     margin: '1%',
     boxShadow: '0 2px 4px 0 rgba(0,0,0,0.10)'
   };
