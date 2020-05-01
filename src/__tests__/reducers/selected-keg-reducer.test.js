@@ -2,6 +2,7 @@ import selectedKegReducer from '../../reducers/selected-keg-reducer';
 
 describe('selectedKegReducer', () => {
 
+  let action;
   const selectedKeg = {
     name: 'hazy IPA',
     brewery: 'ex novo',
@@ -16,7 +17,7 @@ describe('selectedKegReducer', () => {
   });
 
   test('should successfully set the selectedKeg to the keg passed to the reducer', () => {
-    const action = {
+    action = {
       type: 'CHANGE_SELECTED',
       name: 'hazy IPA',
       brewery: 'ex novo',
@@ -26,5 +27,12 @@ describe('selectedKegReducer', () => {
       id: 1
     };
     expect(selectedKegReducer(null, action)).toEqual(selectedKeg);
+  });
+
+  test('should reset selected keg to null', () => {
+    action = {
+      type: 'UNSELECT_KEG'
+    };
+    expect(selectedKegReducer(selectedKeg, action)).toEqual(null);
   });
 });
