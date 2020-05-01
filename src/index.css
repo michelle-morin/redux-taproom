@@ -5,9 +5,16 @@ body {
   color: #388087;
 }
 
-h2.beer-name {
+/* h2.beer-name {
   color: rgb(86,74,64);
   background-color: rgb(247,236,212);
+} */
+
+h2.beer-name {
+  background-image: url(assets/brushstroke.png);
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+  padding: 8px 0;
 }
 
 .beer-image {
