@@ -38,6 +38,7 @@ Keg.propTypes = {
   ibu: PropTypes.number,
   price: PropTypes.number,
   pintQuantity: PropTypes.number,
+  kegTappedDate: PropTypes.number,
   id: PropTypes.string,
   whenKegClicked: PropTypes.func,
   whenBuyClicked: PropTypes.func
