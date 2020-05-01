@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8383fd5f4617c1716ca68562eb73f2c",
+    "revision": "f466a20b2867d83d0cb808739b49a18d",
     "url": "/redux-taproom/index.html"
   },
   {
-    "revision": "c958eb3d67250b768172",
+    "revision": "5d2f1cb1ab66ad347aa7",
     "url": "/redux-taproom/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "76006a1ad433cfc9198a",
+    "revision": "934b15a6c15abc4b3970",
     "url": "/redux-taproom/static/css/main.d8099662.chunk.css"
   },
   {
-    "revision": "c958eb3d67250b768172",
-    "url": "/redux-taproom/static/js/2.7527f1d4.chunk.js"
+    "revision": "5d2f1cb1ab66ad347aa7",
+    "url": "/redux-taproom/static/js/2.0227cdf2.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/redux-taproom/static/js/2.7527f1d4.chunk.js.LICENSE.txt"
+    "url": "/redux-taproom/static/js/2.0227cdf2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "76006a1ad433cfc9198a",
-    "url": "/redux-taproom/static/js/main.67ff4a7a.chunk.js"
+    "revision": "934b15a6c15abc4b3970",
+    "url": "/redux-taproom/static/js/main.179f6d8c.chunk.js"
   },
   {
-    "revision": "79353f6623dc7a3e846b",
-    "url": "/redux-taproom/static/js/runtime-main.267e2067.js"
+    "revision": "6dce1dd310fcb80fe3c3",
+    "url": "/redux-taproom/static/js/runtime-main.547eca93.js"
   },
   {
     "revision": "035cf0e79966647deefa61be1fe99e04",

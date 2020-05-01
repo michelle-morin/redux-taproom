@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/redux-taproom/static/css/main.d8099662.chunk.css",
-    "main.js": "/redux-taproom/static/js/main.67ff4a7a.chunk.js",
-    "main.js.map": "/redux-taproom/static/js/main.67ff4a7a.chunk.js.map",
-    "runtime-main.js": "/redux-taproom/static/js/runtime-main.267e2067.js",
-    "runtime-main.js.map": "/redux-taproom/static/js/runtime-main.267e2067.js.map",
+    "main.js": "/redux-taproom/static/js/main.179f6d8c.chunk.js",
+    "main.js.map": "/redux-taproom/static/js/main.179f6d8c.chunk.js.map",
+    "runtime-main.js": "/redux-taproom/static/js/runtime-main.547eca93.js",
+    "runtime-main.js.map": "/redux-taproom/static/js/runtime-main.547eca93.js.map",
     "static/css/2.69121389.chunk.css": "/redux-taproom/static/css/2.69121389.chunk.css",
-    "static/js/2.7527f1d4.chunk.js": "/redux-taproom/static/js/2.7527f1d4.chunk.js",
-    "static/js/2.7527f1d4.chunk.js.map": "/redux-taproom/static/js/2.7527f1d4.chunk.js.map",
+    "static/js/2.0227cdf2.chunk.js": "/redux-taproom/static/js/2.0227cdf2.chunk.js",
+    "static/js/2.0227cdf2.chunk.js.map": "/redux-taproom/static/js/2.0227cdf2.chunk.js.map",
     "index.html": "/redux-taproom/index.html",
-    "precache-manifest.08c48af06f96523e8122d3e08dff05a2.js": "/redux-taproom/precache-manifest.08c48af06f96523e8122d3e08dff05a2.js",
+    "precache-manifest.52bbe4979609084221ac9117daafd833.js": "/redux-taproom/precache-manifest.52bbe4979609084221ac9117daafd833.js",
     "service-worker.js": "/redux-taproom/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/redux-taproom/static/css/2.69121389.chunk.css.map",
     "static/css/main.d8099662.chunk.css.map": "/redux-taproom/static/css/main.d8099662.chunk.css.map",
-    "static/js/2.7527f1d4.chunk.js.LICENSE.txt": "/redux-taproom/static/js/2.7527f1d4.chunk.js.LICENSE.txt",
+    "static/js/2.0227cdf2.chunk.js.LICENSE.txt": "/redux-taproom/static/js/2.0227cdf2.chunk.js.LICENSE.txt",
     "static/media/beer.png": "/redux-taproom/static/media/beer.035cf0e7.png",
     "static/media/index.css": "/redux-taproom/static/media/hops.827a1fb8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.267e2067.js",
+    "static/js/runtime-main.547eca93.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.7527f1d4.chunk.js",
+    "static/js/2.0227cdf2.chunk.js",
     "static/css/main.d8099662.chunk.css",
-    "static/js/main.67ff4a7a.chunk.js"
+    "static/js/main.179f6d8c.chunk.js"
   ]
 }
