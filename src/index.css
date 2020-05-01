@@ -32,7 +32,6 @@ button.reused-button {
 button.reused-button:hover, button.reused-button:focus {
   background-color: rgb(86,74,64);
   color: rgb(247,236,212);
-  height: 3rem;
   width: auto;
   font-size: 1.5rem;
   padding: 1%;
