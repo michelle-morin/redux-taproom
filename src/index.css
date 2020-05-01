@@ -16,28 +16,32 @@ h2.beer-name {
   width: 200px;
 }
 
-button.reused-button {
+button.reused-button, button.reused-button:focus {
   color: rgb(86,74,64);
   background-color: rgb(247,236,212);
   height: 3rem;
   width: auto;
   font-size: 1.5rem;
   padding: 1%;
+  margin-left: 1%;
+  margin-bottom: 0.5%;
   cursor: pointer;
   outline: none;
-  box-shadow: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   border: none;
+  transition: transform .4s ease-in-out;
 }
 
-button.reused-button:hover, button.reused-button:focus {
+button.reused-button:hover, button.reused-button:active {
   background-color: rgb(86,74,64);
   color: rgb(247,236,212);
   width: auto;
+  transform: scale(1.05);
   font-size: 1.5rem;
   padding: 1%;
   cursor: pointer;
   outline: none;
-  box-shadow: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   border: none;
 }
 
@@ -53,24 +57,35 @@ input.form-control {
   font-size: 1.5rem;
   padding: 1%;
   outline: none;
-  box-shadow: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
 }
 
-button.new-keg-button, button.new-keg-button:hover {
+button.new-keg-button, button.new-keg-button:focus {
+  background-color: #388087;
+  color: #f6f6f2;
   display: block;
   margin: auto auto;
   margin-top: 1%;
   width: 25vw;
   font-size: 1.5rem;
   padding: 1%;
-  background-color: #388087;
-  color: #f6f6f2;
   outline: none;
-  box-shadow: none;
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
+  transition: transform .4s ease-in-out;
 }
 
-button.buy-button, button.details-button {
+button.new-keg-button:hover {
+  background-color: rgb(198,229,214);
+  color: #388087;
+  border: none;
+  outline: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: scale(1.05);
+}
+
+button.buy-button, button.details-button, button.buy-button:focus, button.details-button:focus {
   display: block;
   margin: auto auto;
   margin-bottom: 2%;
@@ -81,15 +96,17 @@ button.buy-button, button.details-button {
   background-color: rgb(198,229,214);
   color: #388087;
   outline: none;
-  box-shadow: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
   border: none;
+  transition: transform .4s ease-in-out;
 }
 
-button.buy-button:hover, button.details-button:hover, button.buy-button:focus, button.details-button:focus {
-  transform: scale(1.1);
+button.buy-button:hover, button.details-button:hover {
+  transform: scale(1.05);
   background-color: #388087;
   color: #f6f6f2;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 p.empty-keg {
@@ -97,7 +114,7 @@ p.empty-keg {
   font-size: 1.5rem;
 }
 
-button.almost-gone {
+button.almost-gone, button.almost-gone:focus {
   background-color: #388087;
   color: #f6f6f2;
 }
@@ -105,9 +122,10 @@ button.almost-gone {
 button.almost-gone:hover {
   background-color: #f6f6f2;
   color: #388087;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-button.delete-button {
+button.delete-button, button.delete-button:focus {
   display: block;
   margin: auto auto;
   margin-bottom: 2%;
@@ -118,6 +136,6 @@ button.delete-button {
   background-color: rgb(198,229,214);
   color: #388087;
   outline: none;
-  box-shadow: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   cursor: pointer;
 }

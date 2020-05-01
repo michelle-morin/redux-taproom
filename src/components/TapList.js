@@ -6,7 +6,7 @@ function TapList(props){
 
   const tapListStyles = {
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     alignItems: 'flex-start',
     flexWrap: 'wrap'
   }

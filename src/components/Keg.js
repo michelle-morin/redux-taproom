@@ -16,7 +16,8 @@ function Keg(props) {
     width: '300px',
     height: '300px',
     padding: '1%',
-    margin: '1%'
+    margin: '1%',
+    boxShadow: '0 2px 4px 0 rgba(0,0,0,0.10)'
   };
 
   return(
