@@ -6,20 +6,21 @@
 
 ## Description
 
-_This application, built using Create React App, is a taproom where a bar can track their beer inventory. All application state is stored using Redux._
+_This application is a taproom where a bar can track their beer inventory. Redux stores all application state. Slices of state include masterKegList (an object holding all kegs in the taproom) formVisible (a boolean indicating whether or not the NewKegForm is visible), and selectedKeg (an object that is either null or a keg in the taproom))._
 
-_Deployed on [GitHub Pages](https://michelle-morin.github.io/redux-taproom/)_
+_This application is deployed on [GitHub Pages](https://michelle-morin.github.io/redux-taproom/)!_
 
 ### Specification user stories:
 
-* A user is able to see a list/menu of all available kegs. For each keg, the user is able to see its name, brewery, price, and alcohol content (ABV).
-* A user is able to submit a form to add a new keg to the list.
-* A user is able to click on a keg to see its details page.
-* A user is able to see how many pints are remaining in a keg (a full keg is assumed to include 124 pints). The pint quantity remaining in a keg is displayed on that keg's detail page.
-* A user is able to click a "buy" button next to a keg whenever a pint is sold. This decreases the number of pints remaining by 1.
-* When there are between 0 and 10 pints remaining in a keg, a user is able to see that the keg is almost gone (indicated on the "buy" button).
-* A keg is unable to be poured from (pint count decremented) when the keg is empty. Instead, a user is able to see a note that the keg is empty.
-* A user is able to delete a keg when it is empty (0 pints remaining).
+* As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brewery, price per pint, alcohol content (ABV), and International Bitterness Units scale (IBU).
+* As a user, I want to submit a form to add a new keg to the list.
+* As a user, I want to click on a keg to see its details page.
+* As a user, I want to see how many pints remain in a keg (a full keg is assumed to include 124 pints). Each keg's detail page displays its remaining pint quantity.
+* As a user, I want to see the freshness of each keg. Each keg's detail page displays its tap date.
+* As a user, I want to click a "buy" button next to a keg whenever a pint is sold. Clicking the buy button decrements the keg's remaining pint quantity by 1.
+* As a user, I want to see when a keg is almost empty. When a keg contains > 0 and <= 10 remaining pints, the "buy" button indicates that the keg is almost gone.
+* As a user, I want to be unable to sell a pint from an empty keg. Once a keg is empty (0 pints remaining), the buy button is replaced with a note indicating that the keg is sold out.
+* As a user, I want to be able to remove a keg from the taproom, but only once the keg is empty. When a keg is empty 0 pints remaining), the keg's detail page displays a "delete" button to remove the keg from the taproom.
 
 ### Component Tree
 ![component tree](/ComponentTree.jpg)
