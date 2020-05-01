@@ -3,9 +3,7 @@ import beer from '../assets/beer.png';
 
 function BeerImage(){
   return (
-    <div>
-      <img className="beer-image" src={beer} alt="illustration of hand holding a beer"/>
-    </div>
+    <img className="beer-image" src={beer} alt="illustration of hand holding a beer"/>
   );
 }
 
