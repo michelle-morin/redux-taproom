@@ -5,6 +5,7 @@ import KegDetail from './KegDetail';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
+import * as a from '../actions';
 
 const tapControlStyles = {
   position: 'relative',
@@ -22,73 +23,38 @@ function TapControl(props) {
 
   const handleClick = () => {
     if (props.selectedKeg != null) {
-      const action = {
-        type: 'UNSELECT_KEG'
-      };
+      const action = a.unselectKeg();
       dispatch(action);
     } else {
-      const action = {
-        type: 'TOGGLE_FORM'
-      }
+      const action = a.toggleForm();
       dispatch(action);
     }
   };
 
   const handleAddingNewKegToList = (newKeg) => {
-    const { name, brewery, alcoholContent, ibu, price, pintQuantity, id } = newKeg;
-    const action = {
-      type: 'ADD_KEG',
-      name: name,
-      brewery: brewery,
-      alcoholContent: alcoholContent,
-      ibu: ibu,
-      price: price,
-      pintQuantity: pintQuantity,
-      id: id
-    };
+    const action = a.addKeg(newKeg);
     dispatch(action);
-    const actionTwo = {
-      type: 'TOGGLE_FORM'
-    };
+    const actionTwo = a.toggleForm();
     dispatch(actionTwo);
   };
 
   const handleChangingSelectedKeg = (id) => {
     const selectedKeg = props.masterKegList[id];
-    const action = {
-      type: 'CHANGE_SELECTED',
-      name: selectedKeg.name,
-      brewery: selectedKeg.brewery,
-      alcoholContent: selectedKeg.alcoholContent,
-      ibu: selectedKeg.ibu,
-      price: selectedKeg.price,
-      pintQuantity: selectedKeg.pintQuantity,
-      id: selectedKeg.id
-    };
+    const action = a.changeSelected(selectedKeg);
     dispatch(action);
   };
 
   const handleKegPurchase = (id) => {
-    const action = {
-      type: 'SELL_KEG',
-      id: id
-    };
+    const action = a.sellKeg(id);
     dispatch(action);
-    const actionTwo = {
-      type: 'UNSELECT_KEG'
-    };
+    const actionTwo = a.unselectKeg();
     dispatch(actionTwo);
   };
 
   const handleDeletingKeg = (id) => {
-    const action = {
-      type: 'DELETE_KEG',
-      id: id
-    };
+    const action = a.deleteKeg(id);
     dispatch(action);
-    const actionTwo = {
-      type: 'UNSELECT_KEG'
-    };
+    const actionTwo = a.unselectKeg();
     dispatch(actionTwo);
   };
 
