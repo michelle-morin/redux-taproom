@@ -11,7 +11,9 @@ function App() {
   return (
     <div style={appStyles}>
       <Header />
-      <TapControl />
+      <div className="tap-control">
+        <TapControl />
+      </div>
       <Footer />
     </div>
   );
