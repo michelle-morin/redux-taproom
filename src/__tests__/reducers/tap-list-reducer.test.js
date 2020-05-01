@@ -1,5 +1,4 @@
 import tapListReducer from '../../reducers/tap-list-reducer';
-import { v4 } from 'uuid';
 
 describe('tapListReducer', () => {
 
