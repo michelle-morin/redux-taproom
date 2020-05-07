@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/redux-taproom/static/css/main.d8099662.chunk.css",
-    "main.js": "/redux-taproom/static/js/main.179f6d8c.chunk.js",
-    "main.js.map": "/redux-taproom/static/js/main.179f6d8c.chunk.js.map",
+    "main.js": "/redux-taproom/static/js/main.09bfc834.chunk.js",
+    "main.js.map": "/redux-taproom/static/js/main.09bfc834.chunk.js.map",
     "runtime-main.js": "/redux-taproom/static/js/runtime-main.547eca93.js",
     "runtime-main.js.map": "/redux-taproom/static/js/runtime-main.547eca93.js.map",
     "static/css/2.69121389.chunk.css": "/redux-taproom/static/css/2.69121389.chunk.css",
     "static/js/2.0227cdf2.chunk.js": "/redux-taproom/static/js/2.0227cdf2.chunk.js",
     "static/js/2.0227cdf2.chunk.js.map": "/redux-taproom/static/js/2.0227cdf2.chunk.js.map",
     "index.html": "/redux-taproom/index.html",
-    "precache-manifest.52bbe4979609084221ac9117daafd833.js": "/redux-taproom/precache-manifest.52bbe4979609084221ac9117daafd833.js",
+    "precache-manifest.6c881344a2d4bf327edf8054e1043b51.js": "/redux-taproom/precache-manifest.6c881344a2d4bf327edf8054e1043b51.js",
     "service-worker.js": "/redux-taproom/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/redux-taproom/static/css/2.69121389.chunk.css.map",
     "static/css/main.d8099662.chunk.css.map": "/redux-taproom/static/css/main.d8099662.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.69121389.chunk.css",
     "static/js/2.0227cdf2.chunk.js",
     "static/css/main.d8099662.chunk.css",
-    "static/js/main.179f6d8c.chunk.js"
+    "static/js/main.09bfc834.chunk.js"
   ]
 }

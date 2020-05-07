@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f466a20b2867d83d0cb808739b49a18d",
+    "revision": "dbb717d05f7ad748bed8e0fcc9def9b3",
     "url": "/redux-taproom/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/redux-taproom/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "934b15a6c15abc4b3970",
+    "revision": "4247114490714ff8cf5b",
     "url": "/redux-taproom/static/css/main.d8099662.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/redux-taproom/static/js/2.0227cdf2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "934b15a6c15abc4b3970",
-    "url": "/redux-taproom/static/js/main.179f6d8c.chunk.js"
+    "revision": "4247114490714ff8cf5b",
+    "url": "/redux-taproom/static/js/main.09bfc834.chunk.js"
   },
   {
     "revision": "6dce1dd310fcb80fe3c3",
