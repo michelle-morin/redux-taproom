@@ -26,6 +26,7 @@ function Keg(props) {
       <p>{props.brewery}</p>
       <p>ABV: {props.alcoholContent}% | IBU: {props.ibu}</p>
       <p>${props.price} per pint</p>
+      <p>{props.pintQuantity} pints in keg</p>
       {inStock(props.pintQuantity)}
       <Button className="details-button" onClick = {()=> props.whenKegClicked(props.id)}>DETAILS</Button>
     </Card>
